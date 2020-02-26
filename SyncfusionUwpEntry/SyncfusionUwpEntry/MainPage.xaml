@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:textInputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:syncfusionUwpEntry="clr-namespace:SyncfusionUwpEntry;assembly=SyncfusionUwpEntry"
+             mc:Ignorable="d"
+             x:Class="SyncfusionUwpEntry.MainPage">
+    <d:ContentPage.BindingContext>
+        <syncfusionUwpEntry:MainPageViewModel />
+    </d:ContentPage.BindingContext>
+    
+    <StackLayout>
+        <textInputLayout:SfTextInputLayout Hint="Name">
+            <Entry Text="{Binding Name}"/>
+        </textInputLayout:SfTextInputLayout>
+
+        <textInputLayout:SfTextInputLayout Hint="Name">
+            <Entry Text="{Binding Name}" IsEnabled="False"/>
+        </textInputLayout:SfTextInputLayout>
+    </StackLayout>
+
+</ContentPage>
